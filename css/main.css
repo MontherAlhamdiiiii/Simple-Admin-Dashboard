@@ -7,6 +7,7 @@ body {
   font-family:
     "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans",
     Arial, sans-serif;
+  margin-top: -11px;
 }
 
 :root {
@@ -30,18 +31,26 @@ body {
   overflow: hidden;
   transition: all 0.4s;
 }
-.sidebar:hover {
+.bk{
+  display: block;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  min-height: 100vh;
+  width: 100%;
+  background-color: #212529;
+  opacity: 0.5;
+  transition: 0.5s;
+}
+.expand {
     width: 250px;
 }
-.sidebar:hover .img {
-    margin-left: 0px;
+ .img-onToggle , .icon-edit{
+    margin-left: 0px !important;
 }
-.sidebar:hover .tab a i {
-    margin-left: 0px;
-}
-.sidebar:hover .tab:last-child {
-    width: 80%;
-}
+.last-tab {
+    width: 80% !important;
+} 
 .profile {
   display: flex;
   align-items: center;
@@ -90,7 +99,7 @@ body {
   text-decoration: none;
   color: black;
 }
-.tab:not(.tab:last-child)    a:hover, .active  {
+.tab-hover{
   background-color: #e6e6e8;
 }
 .tab a i {
@@ -121,7 +130,7 @@ body {
   margin-left: auto;
   transition: all 0.4s;
 }
-.sidebar:hover ~ .main {
+.main-expand {
     width: calc(100% - 250px);
 }
 .container {
